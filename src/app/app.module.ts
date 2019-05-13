@@ -13,6 +13,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RegisteredComponent } from './registered/registered.component';
 import {RegisteredService} from "./registered.service";
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './login/login.component';
+import {LoginService} from "./login.service";
+import { MyAlbumComponent } from './my-album/my-album.component';
+import {UserService} from "./user.service";
+import { AddPhotoComponent } from './add-photo/add-photo.component';
+import {AddPhotoService} from "./add-photo.service";
+import {UploadPhotoService} from "./upload-photo.service";
 
 
 @NgModule({
@@ -22,7 +29,10 @@ import {FormsModule} from "@angular/forms";
     PhotoListComponent,
     SidePanelComponent,
     NavBarComponent,
-    RegisteredComponent
+    RegisteredComponent,
+    LoginComponent,
+    MyAlbumComponent,
+    AddPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +43,11 @@ import {FormsModule} from "@angular/forms";
   ],
   providers: [
     PhotoService,
-    RegisteredService
+    RegisteredService,
+    LoginService,
+    UserService,
+    AddPhotoService,
+    UploadPhotoService
   ],
   bootstrap: [AppComponent]
 })
